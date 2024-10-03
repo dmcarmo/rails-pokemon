@@ -1,0 +1,4 @@
+<% @pokemons.each do |pokemon| %>
+  <%= pokemon.name %>
+  <%= cl_image_tag pokemon.photo.key %>
+<% end %>
