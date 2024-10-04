@@ -1,0 +1,7 @@
+<%= link_to trainer_path(trainer) do %>
+  <div class="pokemon-card" >
+    <%= cl_image_tag trainer.photo.key %>
+    <h2><%= trainer.name %></h2>
+    <span><%= trainer_age(trainer.age) %></span>
+  </div>
+<% end %>

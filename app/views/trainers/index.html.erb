@@ -1,0 +1,13 @@
+<%= link_to "< Pokedex", root_path %>
+
+<h1>Let's Get Training</h1>
+
+<% if @trainers.exists? %>
+  <div class="grid">
+  <% @trainers.each do |trainer| %>
+    <%= render trainer %> 
+  <% end %>
+  </div>
+<% else %>
+  <p>There are no Trainers on the Pokedex</p>
+<% end %>
