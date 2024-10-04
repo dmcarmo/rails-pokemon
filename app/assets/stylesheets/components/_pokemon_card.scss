@@ -7,4 +7,10 @@
   border: 10px solid #F3CF6B;
   border-radius: 0.5rem;
   background-color: #7FA6C5;
+  background: linear-gradient(45deg, #a4c8e2 0%, #6590b5 100%);
+  background-size: 200% 200%;
+
+  img {
+    width: 100%;
+  }
 }

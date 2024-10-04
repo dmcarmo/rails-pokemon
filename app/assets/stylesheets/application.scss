@@ -10,3 +10,12 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+body {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+a {
+  text-decoration: none;
+}
