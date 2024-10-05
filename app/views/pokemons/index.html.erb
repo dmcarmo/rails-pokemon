@@ -1,4 +1,9 @@
 <%= link_to "Trainers", trainers_path %>
+
+<%= form_with url: root_path, method: :get do |f| %>
+  <%= f.text_field :search, placeholder: "Search for a Pokemon" %>
+  <%= f.submit "Search", class: "btn btn-primary" %>
+<% end %>
 <% if @pokemons.exists? %>
   <div class="grid">
   <% @pokemons.each do |pokemon| %>
