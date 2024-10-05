@@ -1,0 +1,10 @@
+<%= link_to "< All Trainers", trainers_path %>
+
+<h2>Sign up to train</h2>
+
+<%= simple_form_for @trainer do |f| %>
+  <%= f.input :name %>
+  <%= f.input :age %>
+  <%= f.input :photo %>
+  <%= f.submit "Create Trainer" %>
+<% end %>

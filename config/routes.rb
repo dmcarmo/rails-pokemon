@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :pokemons, only: %i[index show] do
     resources :pokeballs, only: %i[create]
   end
+  resources :pokeballs, only: :destroy
 
-  resources :trainers, only: %i[index show]
+  resources :trainers, only: %i[index show new create]
 end
