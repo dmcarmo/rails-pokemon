@@ -4,6 +4,7 @@ require 'open-uri'
 puts 'Cleaning database...'
 Pokemon.destroy_all
 Trainer.destroy_all
+Pokeball.destroy_all
 
 puts 'Creating trainers...'
 ash = Trainer.create(name: "Ash Ketchum", age: 18)
@@ -30,4 +31,14 @@ results.each do |result|
   puts "Screeahhhhh! #{pokemon.name} created!"
 end
 
-puts "Finished! Created #{Pokemon.count} pokemons."
+puts 'Creating pokeballs...'
+towns = ["Vermilion City", "Cerulean City", "Pewter City", "Saffron City", "Celadon City", "Cinnabar Island",
+         "Fuchsia City"]
+Trainer.all.each do |trainer|
+  Pokemon.all.sample(3).each do |pokemon|
+    Pokeball.create(trainer:, pokemon:, caught_on: Date.today, location: towns.sample)
+    puts "Pokeball created for #{trainer.name} with #{pokemon.name}!"
+  end
+end
+
+puts "Finished! Created #{Trainer.count} trainers, #{Pokemon.count} pokemons, and #{Pokeball.count} pokeballs."
